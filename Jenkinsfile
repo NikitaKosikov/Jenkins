@@ -36,7 +36,6 @@ pipeline {
         stage('Assemble') {
             steps {
                 gradlew('assemble')
-                stash includes: '**/build/libs/*.war', name: 'app'
             }
         }
        
