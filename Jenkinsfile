@@ -23,7 +23,7 @@ pipeline {
         }
 
 	stage('Code Analysis') {
-              withSonarQubeEnv() { // Will pick the global server connection you have configured
+              withSonarQubeEnv(SonarQube) { // Will pick the global server connection you have configured
      		 bat '.\\gradlew sonarqube'
               }
         }
