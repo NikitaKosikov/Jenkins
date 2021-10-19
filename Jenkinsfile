@@ -45,7 +45,7 @@ pipeline {
 	    def tomcatBin = 'C:\\Users\\Nikita_Kosikov\\Desktop\\apache-tomcat-9.0.54\\bin'
        
             steps {
-		bat "copy target\\Gift-Certificate.war \"${tomcatWeb}\\Gift-Certificate.war""
+		
                 sleep(time:5,unit:"SECONDS")
 		bat "${tomcatBin}\\startup.bat"
  		sleep(time:100,unit:"SECONDS")
