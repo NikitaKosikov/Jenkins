@@ -2,5 +2,5 @@ projectKey=Gift-Certificate
 serverUrl=http://localhost:9000
 serverVersion=9.1.0.47736
 dashboardUrl=http://localhost:9000/dashboard?id=Gift-Certificate
-ceTaskId=AXyZPV_yf-tvuLEPqaby
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AXyZPV_yf-tvuLEPqaby
+ceTaskId=AXyaEJe6IdQs2ZctduqI
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXyaEJe6IdQs2ZctduqI

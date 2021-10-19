@@ -43,7 +43,7 @@ pipeline {
         environment{
         tomcatWeb = 'C:\\Users\\Nikita_Kosikov\\Desktop\\apache-tomcat-9.0.54\\webapps'
         tomcatBin = 'C:\\Users\\Nikita_Kosikov\\Desktop\\apache-tomcat-9.0.54\\bin'
-        }
+         }
        
             steps {
                // bat "copy target\\Gift-Certificate.war \${tomcatWeb}\\Gift-Certificate.war"
