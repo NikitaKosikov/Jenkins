@@ -24,8 +24,8 @@ pipeline {
 
 	stage('Code Analysis') {
              steps {
-                  bat .\\gradlew sonarqube -D"sonar.projectKey=Gift-Certificate" -D"sonar.sources=." -D"sonar.host.url=http:
-//localhost:9000" -D"sonar.login=5da28e1f80639b4a15a179cf84b5804e3e1e34b0" 
+                  bat ".\\gradlew sonarqube -D"sonar.projectKey=Gift-Certificate" -D"sonar.sources=." -D"sonar.host.url=http:
+//localhost:9000" -D"sonar.login=5da28e1f80639b4a15a179cf84b5804e3e1e34b0""
              }
         }
       
