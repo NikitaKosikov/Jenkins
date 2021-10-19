@@ -21,6 +21,13 @@ pipeline {
                 }
             }
         }
+
+	stage('Code Analysis') {
+             steps {
+                  gradlew('sonarqube')
+             }
+        }
+      
       
   
         
