@@ -41,8 +41,8 @@ pipeline {
        
         stage('Deploy to Production') {
 
-	    def tomcatWeb = 'C:\Users\Nikita_Kosikov\Desktop\apache-tomcat-9.0.54\webapps'
-	    def tomcatBin = 'C:\Users\Nikita_Kosikov\Desktop\apache-tomcat-9.0.54\bin'
+	    def tomcatWeb = 'C:\\Users\\Nikita_Kosikov\\Desktop\\apache-tomcat-9.0.54\\webapps'
+	    def tomcatBin = 'C:\\Users\\Nikita_Kosikov\\Desktop\\apache-tomcat-9.0.54\\bin'
        
             steps {
 		bat "copy target\\Gift-Certificate.war \"${tomcatWeb}\\Gift-Certificate.war""
