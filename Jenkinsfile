@@ -22,27 +22,15 @@ pipeline {
             }
         }
 
-stage('Long-running Verification') {
-          
-            parallel {
-                stage('Integration Tests') {
-                    steps {
-                        gradlew('integrationTest')
-                    }
-                    post {
-                        always {
-                            junit '**/build/test-results/integrationTest/TEST-*.xml'
-                        }
-                    }
-                }
+
                 stage('Code Analysis') {
                     steps {
                         withSonarQubeEnv(SonarQube) { // Will pick the global server connection you have configured
      		 	bat '.\\gradlew sonarqube'
                     }
                 }
-            }
-        }
+            
+        
         
         stage('Assemble') {
             steps {
