@@ -23,10 +23,14 @@ pipeline {
         }
 
 	stage('Code Analisis') {
-		steps{
-		     withSonarQubeEnv('SonarQube') {
-     		     bat '.\\gradlew sonarqube'
-		}
+		 environment {
+        		scannerHome = tool 'SonarQubeScanner'
+    		}
+  		  steps {
+      			  withSonarQubeEnv('sonarqube') {
+          		  bat "${scannerHome}/bin/sonar-scanner"
+       			 }
+    		}
 	}
         
         stage('Assemble') {
