@@ -47,7 +47,7 @@ pipeline {
          }
        
             steps {
-                bat "copy build\\libs\\Gift-Certificate.war \${tomcatWeb}\\Gift-Certificate.war"
+                bat "copy web\\build\\libs\\Gift-Certificate.war \${tomcatWeb}"
 
                 sleep(time:5,unit:"SECONDS")
 		        bat "${tomcatBin}\\startup.bat"
