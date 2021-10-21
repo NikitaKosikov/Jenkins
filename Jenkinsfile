@@ -42,8 +42,8 @@ pipeline {
        
         stage('Deploy to Production') {
         environment{
-        tomcatWeb = 'C:\\Users\\Nikita_Kosikov\\Desktop\\apache-tomcat-9.0.54\\webapps'
-        tomcatBin = 'C:\\Users\\Nikita_Kosikov\\Desktop\\apache-tomcat-9.0.54\\bin'
+        tomcatWeb = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\webapps'
+        tomcatBin = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\bin'
          }
        
             steps {
