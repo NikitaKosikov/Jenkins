@@ -3,21 +3,12 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
     id "org.sonarqube" version "3.3"
-    id 'war'
 }
 
 allprojects {
     repositories {
         mavenCentral()
     }
-}
-
-bootWar{
-    archiveName 'Gift-Certificate.war'
-    manifest {
-        attributes 'Main-Class': 'com.epam.esm.SpringRunner'
-    }
-    mainClass = 'com.epam.esm.SpringRunner'
 }
 
 bootJar {
