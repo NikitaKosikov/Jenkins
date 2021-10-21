@@ -12,8 +12,6 @@ allprojects {
 }
 
 
-
-
 bootJar {
     manifest {
         attributes 'Main-Class': 'com.epam.esm.SpringRunner'

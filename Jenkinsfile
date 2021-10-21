@@ -24,14 +24,14 @@ pipeline {
         }
 
 	stage('Code Analisis') {
-		 environment {
+	     environment {
         		scannerHome = tool 'SonarQubeScanner'
     		}
-  		  steps {
+  		 steps {
       			  withSonarQubeEnv('sonarqube') {
           		  bat "${scannerHome}/bin/sonar-scanner"
        			 }
-    		}
+         }
 	}
         
         stage('Assemble') {
@@ -47,7 +47,8 @@ pipeline {
          }
        
             steps {
-               // bat "copy target\\Gift-Certificate.war \${tomcatWeb}\\Gift-Certificate.war"
+                bat "copy build\\libs\\Gift-Certificate.war \${tomcatWeb}\\Gift-Certificate.war"
+
                 sleep(time:5,unit:"SECONDS")
 		        bat "${tomcatBin}\\startup.bat"
  		        sleep(time:100,unit:"SECONDS")

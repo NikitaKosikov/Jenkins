@@ -1,5 +1,18 @@
+plugins{
+    id 'war'
+}
+
 group 'com.epam.esm'
 version '1.0'
+
+
+bootWar{
+    archiveName 'Gift-Certificate.war'
+    manifest {
+        attributes 'Main-Class': 'com.epam.esm.SpringRunner'
+    }
+    mainClass = 'com.epam.esm.SpringRunner'
+}
 
 dependencies {
     implementation project(':model')
