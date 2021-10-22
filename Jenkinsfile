@@ -23,7 +23,7 @@ pipeline {
             }
         }
 
-	stage('Code Analisis') {
+	stage('Code Analisis') { 
 	     environment {
         		scannerHome = tool 'SonarQubeScanner'
     		}
