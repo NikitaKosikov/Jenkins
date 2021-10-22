@@ -42,15 +42,15 @@ pipeline {
        
         stage('Deploy to Production') {
         environment{
-        tomcatWeb = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\webapps'
-        tomcatBin = 'C:\\Program Files\\Apache Software Foundation\\Tomcat 9.0\\bin'
+        tomcatWeb = 'C:\\Users\\Administrator\\Downloads\\apache-tomcat-9.0.54-windows-x64\\apache-tomcat-9.0.54\\webapps'
+        tomcatBin = 'C:\\Users\\Administrator\\Downloads\\apache-tomcat-9.0.54-windows-x64\\apache-tomcat-9.0.54\\bin'
          }
        
             steps {
                 bat "copy /Y web\\build\\libs\\Gift-Certificate.war \"${tomcatWeb}\\Gift-Certificate.war\""
 
                 sleep(time:5,unit:"SECONDS")
-		        bat "\"${tomcatBin}\\catalina.bat\""
+		        bat "\"${tomcatBin}\\startup.bat\""
  		        sleep(time:200,unit:"SECONDS")
             }
         }
