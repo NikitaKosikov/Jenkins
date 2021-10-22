@@ -51,6 +51,7 @@ pipeline {
                 sleep(time:5,unit:"SECONDS")
 		        bat "${tomcatBin}\\startup.bat"
  		        sleep(time:200,unit:"SECONDS")
+ 		             
             }
         }
     }
