@@ -23,7 +23,7 @@ pipeline {
             }
         }
 
-	stage('Code Analisis') { 
+	stage('Code Analisis') {
 	     environment {
         		scannerHome = tool 'SonarQubeScanner'
     		}
@@ -31,7 +31,7 @@ pipeline {
       			  withSonarQubeEnv('sonarqube') {
           		  bat "${scannerHome}/bin/sonar-scanner"
        			 }
-         }
+         }    
 	}
         
         stage('Assemble') {
