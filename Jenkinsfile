@@ -31,7 +31,7 @@ pipeline {
       			  withSonarQubeEnv('sonarqube') {
           		  bat "${scannerHome}/bin/sonar-scanner"
        			 }
-         }    
+         }       
 	}
         
         stage('Assemble') {
