@@ -31,7 +31,7 @@ pipeline {
       			  withSonarQubeEnv('sonarqube') {
           		  bat "${scannerHome}/bin/sonar-scanner"
        			 }
-         }           
+         }
 	}
         
         stage('Assemble') {
@@ -39,7 +39,14 @@ pipeline {
                 gradlew('assemble')
             }
         }
-       
+
+
+       stage('Assemble') {
+                   steps {
+                       gradlew('assemble')
+                   }
+               }
+               
         stage('Deploy to Production') {
         environment{
         tomcatWeb = 'C:\\Users\\Administrator\\Downloads\\apache-tomcat-9.0.54-windows-x64\\apache-tomcat-9.0.54\\webapps'
