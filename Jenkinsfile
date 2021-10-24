@@ -57,5 +57,5 @@ pipeline {
     }
 }
 def gradlew(String... args) {
-    bat ".\\gradlew ${args.join(' ')"
+    bat ".\\gradlew ${args.join(' ')} -s"
 }
