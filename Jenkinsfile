@@ -23,7 +23,7 @@ pipeline {
             }
         }
 
-	stage('Code Analisis') {
+	stage('Code Analysis') {
 	     environment {
         		scannerHome = tool 'SonarQubeScanner'
     		}
@@ -62,5 +62,5 @@ pipeline {
     }
 }
 def gradlew(String... args) {
-    bat ".\\gradlew ${args.join(' ')} -s"
+    bat ".\\gradlew ${args.join(' ')"
 }
