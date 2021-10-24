@@ -29,7 +29,7 @@ pipeline {
     		}
   		 steps {
       			  withSonarQubeEnv('sonarqube') {
-          		  bat "${scannerHome}/bin/sonar-scanner"
+          		  bat '.\\gradlew sonarqube'
        			 }
          }
 	}
@@ -39,13 +39,6 @@ pipeline {
                 gradlew('assemble')
             }
         }
-
-
-       stage('Assemble') {
-                   steps {
-                       gradlew('assemble')
-                   }
-               }
 
         stage('Deploy to Production') {
         environment{
