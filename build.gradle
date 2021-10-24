@@ -49,8 +49,6 @@ subprojects {
     sonarqube {
         properties {
             property "sonar.sources", "src/main/java"
-            property "sonar.login", "admin"
-            property "sonar.password", "admin"
         }
     }
 

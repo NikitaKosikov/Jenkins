@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-                gradlew('clean', 'classes')
+                gradlew('clean', 'build')
             }
         }
 
