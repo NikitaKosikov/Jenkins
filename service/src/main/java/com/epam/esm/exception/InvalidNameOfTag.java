@@ -3,6 +3,7 @@ package com.epam.esm.exception;
 public class InvalidNameOfTag extends GiftCertificateException{
 
     public InvalidNameOfTag() {
+        super(errorCode);
     }
 
     public InvalidNameOfTag(String message, String errorCode) {
