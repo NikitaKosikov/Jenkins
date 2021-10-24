@@ -6,10 +6,12 @@ pipeline {
     }	
 
     stages {
-
-        stage('Clone repo') {
-              git credentialsId: 'Gift-Certificate-GitHub-Credential', url: 'https://github.com/NikitaKosikov/Jenkins.git'
+        steps {
+             stage('Clone repo') {
+                   git credentialsId: 'Gift-Certificate-GitHub-Credential', url: 'https://github.com/NikitaKosikov/Jenkins.git'
+             }
         }
+
 
         stage('Compile') {
             steps {
