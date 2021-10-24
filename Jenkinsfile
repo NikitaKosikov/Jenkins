@@ -6,13 +6,7 @@ pipeline {
     }	
 
     stages {
-             stage('Clone repo') {
-                 steps {
-                   git credentialsId: 'Gift-Certificate-GitHub-Credential', url: 'https://github.com/NikitaKosikov/Jenkins.git'
-                 }
-             }
-
-
+          
         stage('Compile') {
             steps {
                 gradlew('clean', 'build')
