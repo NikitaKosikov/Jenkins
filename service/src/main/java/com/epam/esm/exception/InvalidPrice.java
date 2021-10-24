@@ -4,7 +4,6 @@ public class InvalidPrice extends GiftCertificateException{
 
 
     public InvalidPrice() {
-        super(errorCode);
     }
 
     public InvalidPrice(String message, String errorCode) {

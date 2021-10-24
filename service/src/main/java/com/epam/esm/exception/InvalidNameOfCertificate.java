@@ -4,7 +4,6 @@ public class InvalidNameOfCertificate extends GiftCertificateException{
 
 
     public InvalidNameOfCertificate() {
-        super(errorCode);
     }
 
     public InvalidNameOfCertificate(String message, String errorCode) {

@@ -3,8 +3,7 @@ package com.epam.esm.exception;
 public class GiftCertificateException extends RuntimeException{
     private String errorCode;
 
-    public GiftCertificateException(String errorCode) {
-        this.errorCode = errorCode;
+    public GiftCertificateException() {
     }
 
     public GiftCertificateException(String message, String errorCode) {

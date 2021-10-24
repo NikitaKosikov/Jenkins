@@ -2,7 +2,6 @@ package com.epam.esm.exception;
 
 public class InvalidDuration extends GiftCertificateException{
     public InvalidDuration() {
-        super(errorCode);
     }
 
     public InvalidDuration(String message, String errorCode) {
