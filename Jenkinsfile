@@ -6,6 +6,11 @@ pipeline {
     }	
 
     stages {
+
+        stage('Clone repo') {
+              git credentialsId: 'Gift-Certificate-GitHub-Credential', url: 'https://github.com/NikitaKosikov/Jenkins.git'
+        }
+
         stage('Compile') {
             steps {
                 gradlew('clean', 'build')
@@ -49,7 +54,7 @@ pipeline {
                 bat "copy /Y web\\build\\libs\\Gift-Certificate.war \"${tomcatWeb}\\Gift-Certificate.war\""
 
                 sleep(time:5,unit:"SECONDS")
-		        bat "${tomcatBin}\\startup.bat"  
+		        bat "${tomcatBin}\\startup.bat"
  		        sleep(time:200,unit:"SECONDS")
 
             }
