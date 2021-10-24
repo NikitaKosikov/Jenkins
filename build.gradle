@@ -6,6 +6,7 @@ plugins {
 }
 
 allprojects {
+
     repositories {
         mavenCentral()
     }
@@ -24,6 +25,7 @@ subprojects {
     apply plugin: 'io.spring.dependency-management'
     apply plugin: 'java'
     apply plugin: 'jacoco'
+    apply plugin: 'org.sonarqube'
 
     group = 'com.epam.esm'
     version = '0.0.1-SNAPSHOT'
