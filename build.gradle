@@ -49,7 +49,7 @@ subprojects {
     sonarqube {
         properties {
             property "sonar.sources", "src/main/java"
-            property "sonar.projectKey", "Gift"
+            property "sonar.projectKey", "Gift-Certificate"
         }
     }
 
