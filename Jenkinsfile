@@ -30,7 +30,7 @@ pipeline {
     		}
   		 steps {
       			  withSonarQubeEnv('sonarqube') {
-          		  bat ".\\gradlew sonarqube -D \"sonar.projectKey=Gift-Certificate\" -D \"sonar.host.url=http://localhost:9000\" -D \"sonar.login=d7eeb2c279107b38188f98be64073b1d36834728\""
+          		  bat ".\\gradlew sonarqube -D \"sonar.projectKey=Gift-Certificate\" -D \"sonar.host.url=http://localhost:9000\" -D \"sonar.login=7f2fdb5ba5740c945503951950fc3f7bed8e2a04\""
        			 }
          }
 	}
