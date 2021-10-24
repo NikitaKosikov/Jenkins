@@ -55,11 +55,6 @@ pipeline {
             }
         }
     }
-    post {
-        failure {
-            mail to: 'benjamin.muschko@gmail.com', subject: 'Build failed', body: 'Please fix!'
-        }
-    }
 }
 def gradlew(String... args) {
     bat ".\\gradlew ${args.join(' ')"
